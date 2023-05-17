@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+dotenv.config();
 const userRoute = require("./routes/user");
 const authenticationRoute = require("./routes/authentication");
 const productRoute = require("./routes/product");
@@ -9,8 +10,6 @@ const cartRoute = require("./routes/cart");
 const orderRoute = require("./routes/order");
 const stripeRoute = require("./routes/stripe");
 const cors = require("cors");
-
-dotenv.config();
 
 mongoose.set("strictQuery", true);
 
